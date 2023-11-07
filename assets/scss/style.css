@@ -25,10 +25,6 @@ body {
   grid-area: section2;
 }
 
-.section3 {
-  grid-area: section3;
-}
-
 .footer {
   grid-area: footer;
 }
@@ -68,6 +64,14 @@ video {
 .navbar ul li {
   list-style: none;
   text-shadow: rgb(228, 45, 13) 1px 0 15px;
+  font-size: 20px;
+  letter-spacing: 0.4vw;
+}
+.navbar ul li a:hover {
+  transition: 0.8s;
+  color: black;
+  -webkit-text-stroke: 2px rgb(212, 21, 21);
+  opacity: 0.6;
 }
 .navbar a {
   text-decoration: none;
@@ -83,7 +87,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 25vw;
+  margin-left: 30vw;
 }
 .content h1 {
   font-size: 100px;
@@ -204,11 +208,11 @@ img {
 @media (max-width: 576px) {
   body {
     display: grid;
-    grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+    grid-template-columns: 0.1fr;
+    grid-template-rows: 0.1fr;
     gap: 0px 0px;
     overflow-x: hidden;
-    grid-template-areas: "navbar navbar navbar navbar navbar navbar" "section1 section1 section1 section1 section1 section1" "section2 section2 section2 section2 section2 section2" "footer footer footer footer footer footer";
+    grid-template-areas: "navbar navbar" "section1 section1" "section2 section2" "footer footer";
   }
   .navbar {
     grid-area: navbar;
@@ -218,9 +222,6 @@ img {
   }
   .section2 {
     grid-area: section2;
-  }
-  .section3 {
-    grid-area: section3;
   }
   .footer {
     grid-area: footer;
@@ -261,7 +262,7 @@ img {
     text-decoration: none;
     text-shadow: rgb(228, 45, 13) 1px 0 15px;
     color: #fff;
-    font-size: 7px;
+    font-size: 10px;
   }
   .section1 {
     height: -moz-fit-content;
@@ -275,6 +276,7 @@ img {
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
+    margin-right: 50px;
   }
   .content h1 {
     font-size: 60px;
@@ -288,10 +290,6 @@ img {
     color: black;
     -webkit-text-stroke: 2px rgb(212, 21, 21);
     opacity: 0.6;
-  }
-  @font-face {
-    font-family: "Quake";
-    src: url(../fonts/dpquake_.ttf);
   }
   img {
     max-width: 100%;
